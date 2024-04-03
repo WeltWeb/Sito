@@ -1,0 +1,172 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#hero {
+    background: #f4f4f4;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5); /* Black transparent background */
+    color: #fff; /* Text color */
+    }
+
+
+
+#servizi {
+    padding: 70px 0;
+}
+
+.servizio {
+    margin-bottom: 50px;
+}
+
+.servizio h3 {
+    color: #333;
+}
+
+.servizio p {
+    color: #666;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+#hero {
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Altezza della sezione, adatta in base alle tue esigenze */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000; /* Cambiato da #fff (bianco) a #000 (nero) */
+}
+
+
+#servizi h2 {
+    font-size: 2em; /* Cambia la dimensione del font, adatta il valore in base alle tue preferenze */
+}
+
+#hero:hover .hero-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add styles for the contact button */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #789fd3; /* Change to desired button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Change to desired hover color */
+}
+
+.hero-content {
+    background-color: rgba(51, 51, 51, 0.5); /* Transparent box color */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    position: relative;
+    z-index: 1;
+    width: 1200px; /* Set the width of the box */
+}
+
+
+/* Add fade-in animation for hero content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 2.5s ease forwards;
+}
+
+/* Highlight navigation buttons on hover */
+nav ul li a {
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #f0f0f0; /* Change to desired hover color */
+    color: #333; /* Change to desired hover text color */
+}
+
+/* Adjust the padding and border-radius for navigation buttons */
+nav ul li a {
+    padding: 10px 20px; /* Increase padding to make buttons larger */
+    border-radius: 5px; /* Increase border-radius to make buttons more squarey */
+}
+
+
+/* Add vertical space between logo and nav */
+.logo {
+    margin-bottom: 20px; /* Adjust the margin-bottom value as needed */
+}
+
+/* Extend background to full length of the page */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    z-index: -1;
+}
