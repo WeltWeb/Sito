@@ -99,7 +99,7 @@ footer {
     left: 0;
     width: 100%;
     height: 95%;
-    background-image: url('Immagine.jpg'); /* Replace 'Immagine.jpg' with your actual image URL */
+    background-image: url('Immagine.png'); /* Replace 'Immagine.jpg' with your actual image URL */
     background-size: cover; /* Custom size */
     background-position: center;
     filter: blur(5px); /* Apply a slight blur effect */
