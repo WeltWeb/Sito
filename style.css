@@ -73,14 +73,41 @@ footer {
 
 
 #hero {
-    background-size: cover;
-    background-position: center;
-    height: 80vh; /* Altezza della sezione, adatta in base alle tue esigenze */
+    position: relative;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #000; /* Cambiato da #fff (bianco) a #000 (nero) */
+    color: #fff; /* White text color */
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    background: inherit;
+    z-index: -1;
+}
+
+.background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    background-image: url('Immagine.jpg'); /* Replace 'Immagine.jpg' with your actual image URL */
+    background-size: cover; /* Custom size */
+    background-position: center;
+    filter: blur(5px); /* Apply a slight blur effect */
+    z-index: -1;
+}
+
+.contenuto {
+    padding: 20px;
 }
 
 
@@ -88,9 +115,10 @@ footer {
     font-size: 2em; /* Cambia la dimensione del font, adatta il valore in base alle tue preferenze */
 }
 
-#hero:hover .hero-content {
+#hero:hover .contenuto {
     opacity: 1;
     transform: translateY(0);
+    text-align: center;
 }
 
 /* Add styles for the contact button */
@@ -108,15 +136,17 @@ footer {
     background-color: #0056b3; /* Change to desired hover color */
 }
 
-.hero-content {
-    background-color: rgba(51, 51, 51, 0.5); /* Transparent box color */
+#contenuto {
+    position: relative; /* Ensure the content is positioned relative to the hero section */
+    z-index: 1; /* Ensure the content appears on top of the blurred background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff; /* White text color */
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
-    position: relative;
-    z-index: 1;
-    width: 1200px; /* Set the width of the box */
 }
+
 
 
 /* Add fade-in animation for hero content */
@@ -157,16 +187,4 @@ nav ul li a {
 /* Add vertical space between logo and nav */
 .logo {
     margin-bottom: 20px; /* Adjust the margin-bottom value as needed */
-}
-
-/* Extend background to full length of the page */
-#hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    z-index: -1;
 }
